@@ -4,22 +4,10 @@ import * as Yup from "yup";
 import { FaAtlas } from "react-icons/fa";
 
 const AddbookSchema = Yup.object().shape({
-  title: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("กรุณากรอกชื่อหนังสือ"),
-  description: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("กรุณากรอกข้อมูลของหนังสือ"),
-  price: Yup.number()
-    .min(1, "Too Short!")
-    .max(50, "Too Long!")
-    .required("กรุณากรอกราคาหนังสือ"),
-  stock: Yup.number()
-    .min(1, "Too Short!")
-    .max(50, "Too Long!")
-    .required("กรอกจำนวนหนังสือที่เหลือ"),
+  title: Yup.string().required("กรุณากรอกชื่อหนังสือ"),
+  description: Yup.string().required("กรุณากรอกข้อมูลของหนังสือ"),
+  price: Yup.number().integer().required("กรุณากรอกราคาหนังสือ"),
+  stock: Yup.number().integer().required("กรอกจำนวนหนังสือที่เหลือ"),
 });
 
 const CreateBookForm = () => {
@@ -30,6 +18,7 @@ const CreateBookForm = () => {
       price: "",
       stock: "",
     },
+
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },

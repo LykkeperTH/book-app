@@ -1,0 +1,176 @@
+*{box-sizing: border-box;}
+body {
+  /* background-color: #F8F9F9; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container{
+  /* flex-wrap: wrap; */
+  display: flex;
+  
+}
+.d-flex{
+  display: flex;
+}
+
+.color-main {
+  color: cornflowerblue;
+}
+.color-white {
+  color: antiquewhite;
+}
+.bg-main {
+  background-color: azure;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.pt-10p {
+  padding-top: 10px;
+}
+.pt-5p{
+  padding-top: 5px;
+} 
+.mb-5p{
+  margin-bottom: 5px;
+}
+.pb-10p {
+  padding-bottom: 10px;
+}
+.p-2{
+  padding: 15px;
+}
+.pr-10p {
+  padding-right: 10px;
+}
+.pl-10p {
+  padding-left: 10px;
+}
+
+.mr-10p {
+  margin-right: 10px;
+}
+.ml-10p {
+  margin-left: 10px;
+}
+.mt-10p {
+  margin-top: 10px;
+}
+.mb-10p {
+  margin-bottom: 10px;
+}
+.color-err {
+  color: red;
+}
+.form{
+  
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.wit{
+  width: 500px;
+}
+.btn{
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+
+
+input[type=text], input[type=password],input[type=email],input[type=number],input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password],input[type=email],input[type=number],input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+.pannal{
+  border-radius: 10px;
+  background-color: darkgray;
+  padding:20px;
+}
+
+/* layout */
+ul.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+ul.horizontal li {
+  float: left;
+}
+ul.horizontal li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.horizontal li a.active {
+  background-color: #2196F3;
+}
+
+
+
+  
+
+

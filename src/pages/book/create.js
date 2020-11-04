@@ -39,6 +39,7 @@ const CreateBookForm = () => {
               <b>ชื่อหนังสือ</b>
             </label>
             <input
+              className="form-add focus-form"
               id="title"
               name="title"
               type="text"
@@ -56,6 +57,7 @@ const CreateBookForm = () => {
               <b>รายละเอียดหนังสือ</b>
             </label>
             <input
+              className="form-add focus-form"
               id="description"
               name="description"
               type="text"
@@ -73,6 +75,7 @@ const CreateBookForm = () => {
               <b>ราคา</b>
             </label>
             <input
+              className="form-add focus-form"
               id="price"
               name="price"
               type="number"
@@ -90,6 +93,7 @@ const CreateBookForm = () => {
               <b>จำนวนหนังสือในที่เหลือ</b>
             </label>
             <input
+              className="form-add focus-form"
               id="stock"
               name="stock"
               type="number"

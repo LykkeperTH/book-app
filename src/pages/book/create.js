@@ -34,7 +34,7 @@ const CreateBookForm = () => {
         </h1>
         <hr></hr>
         <div className="pannal">
-          <div>
+          <div className="mt-10p">
             <label htmlFor="title">
               <b>ชื่อหนังสือ</b>
             </label>
@@ -52,7 +52,7 @@ const CreateBookForm = () => {
               <div className="color-err ">{formik.errors.title}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <label htmlFor="description">
               <b>รายละเอียดหนังสือ</b>
             </label>
@@ -70,7 +70,7 @@ const CreateBookForm = () => {
               <div className="color-err">{formik.errors.description}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <label htmlFor="price">
               <b>ราคา</b>
             </label>
@@ -88,7 +88,7 @@ const CreateBookForm = () => {
               <div className="color-err">{formik.errors.price}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <label htmlFor="stock">
               <b>จำนวนหนังสือในที่เหลือ</b>
             </label>
@@ -106,9 +106,9 @@ const CreateBookForm = () => {
               <div className="color-err">{formik.errors.stock}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <button className="btn" type="submit">
-              Submit
+              ตกลง
             </button>
           </div>
         </div>

@@ -37,11 +37,12 @@ const SignupForm = () => {
         </h1>
         <hr></hr>
         <div className="pannal">
-          <div>
+          <div className="mt-10p">
             <label htmlFor="firstName">
               <b>First Name </b>
             </label>
             <input
+              className="form-add focus-form"
               id="firstName"
               name="firstName"
               type="text"
@@ -54,11 +55,12 @@ const SignupForm = () => {
               <div className="color-err ">{formik.errors.firstName}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <label htmlFor="lastName">
               <b>LastName</b>
             </label>
             <input
+              className="form-add focus-form"
               id="lastName"
               name="lastName"
               type="text"
@@ -71,11 +73,12 @@ const SignupForm = () => {
               <div className="color-err">{formik.errors.lastName}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <label htmlFor="email">
               <b>Email Address</b>
             </label>
             <input
+              className="form-add focus-form"
               id="email"
               name="email"
               type="email"
@@ -88,7 +91,7 @@ const SignupForm = () => {
               <div className="color-err">{formik.errors.email}</div>
             )}
           </div>
-          <div>
+          <div className="mt-10p">
             <button className="btn" type="submit">
               Submit
             </button>

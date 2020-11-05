@@ -1,7 +1,8 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
 import { FaAtlas } from "react-icons/fa";
+import BookService from "../../services/book-service";
 
 const AddbookSchema = Yup.object().shape({
   title: Yup.string().required("กรุณากรอกชื่อหนังสือ"),
@@ -11,6 +12,7 @@ const AddbookSchema = Yup.object().shape({
 });
 
 const CreateBookForm = () => {
+  const [isLoading, setLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -20,10 +22,22 @@ const CreateBookForm = () => {
     },
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      handleSubmit(values);
     },
     validationSchema: AddbookSchema,
   });
+  const handleSubmit = async (values) => {
+    setLoading(true);
+    try {
+      const res = await BookService.create(values);
+      console.log(res);
+      alert("สร้างหนังสือสำเร็จ");
+    } catch (error) {
+      console.log(error);
+      alert(error.message);
+    }
+    setLoading(false);
+  };
 
   return (
     <form className="form" onSubmit={formik.handleSubmit}>
@@ -107,8 +121,11 @@ const CreateBookForm = () => {
             )}
           </div>
           <div className="mt-10p">
-            <button className="btn" type="submit">
-              ตกลง
+            <button className="btn" type="submit" disabled={isLoading}>
+              <div className="d-flex align-center justify-center">
+                {isLoading && <div className="loader"> </div>}
+                ตกลง
+              </div>
             </button>
           </div>
         </div>

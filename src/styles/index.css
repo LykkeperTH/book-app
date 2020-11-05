@@ -92,6 +92,7 @@ code {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  font-family: Mitr;
 }
 .form-add {
   width: 100%;
@@ -170,8 +171,8 @@ input[type=number] {
   border: 5px solid #f3f3f3;
   border-radius: 50%;
   border-top: 5px solid #AED6F1 ;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 1s linear infinite;
   margin-left: 10px;

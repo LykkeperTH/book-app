@@ -17,8 +17,8 @@ const CardBooks = ({ book, hadleDeleteBook }) => {
         <img className="width100 img" src={book.imageUrl} alt="Avatar" />
       </div>
       <div>
-        <h3>{book.title}</h3>
-        <span>{book.description}</span>
+        <h3 className="line-clamp-1">{book.title}</h3>
+        <span className="line-clamp-2">{book.description}</span>
       </div>
       <div className="action">
         <DeleteButton onClick={handleDelete}>ลบ</DeleteButton>

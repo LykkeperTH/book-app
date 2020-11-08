@@ -12,7 +12,25 @@ class Book {
       throw error;
     }
   }
-  updateDetail() {}
+  async getBooks() {
+    try {
+      const res = await axios.get(this.url);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+  async deleteBook(bookId) {
+    console.log(bookId);
+    try {
+      const res = await axios.delete(`${this.url}/${bookId}`);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
 }
 const BookService = new Book();
 export default BookService;

@@ -9,6 +9,7 @@ const AddbookSchema = Yup.object().shape({
   description: Yup.string().required("กรุณากรอกข้อมูลของหนังสือ"),
   price: Yup.number().integer().required("กรุณากรอกราคาหนังสือ"),
   stock: Yup.number().integer().required("กรอกจำนวนหนังสือที่เหลือ"),
+  imageUrl: Yup.string().required("ใส่ลิงค์ภาพ"),
 });
 
 const CreateBookForm = () => {
@@ -19,6 +20,7 @@ const CreateBookForm = () => {
       description: "",
       price: "",
       stock: "",
+      imageUrl: "",
     },
 
     onSubmit: (values) => {
@@ -32,6 +34,7 @@ const CreateBookForm = () => {
       const res = await BookService.create(values);
       console.log(res);
       alert("สร้างหนังสือสำเร็จ");
+      formik.resetForm();
     } catch (error) {
       console.log(error);
       alert(error.message);
@@ -104,7 +107,7 @@ const CreateBookForm = () => {
           </div>
           <div className="mt-10p">
             <label htmlFor="stock">
-              <b>จำนวนหนังสือในที่เหลือ</b>
+              <b>จำนวนหนังสือ</b>
             </label>
             <input
               className="form-add focus-form"
@@ -118,6 +121,24 @@ const CreateBookForm = () => {
             />
             {formik.touched.stock && (
               <div className="color-err">{formik.errors.stock}</div>
+            )}
+          </div>
+          <div className="mt-10p">
+            <label htmlFor="imageUrl">
+              <b>รูปภาพหนังสือ</b>
+            </label>
+            <input
+              className="form-add focus-form"
+              id="imageUrl"
+              name="imageUrl"
+              type="string"
+              placeholder="กรุณาใส่ลิงค์"
+              onChange={formik.handleChange}
+              value={formik.values.imageUrl}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.imageUrl && (
+              <div className="color-err">{formik.errors.imageUrl}</div>
             )}
           </div>
           <div className="mt-10p">

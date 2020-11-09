@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BookService from "../../services/book-service";
+import DetailBookById from "../../views/book/detail";
 
 const BookDetailPage = () => {
   const param = useParams();
@@ -17,6 +19,6 @@ const BookDetailPage = () => {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  return <div>{book.id}</div>;
+  return <DetailBookById book={book} key={book.id} />;
 };
 export default BookDetailPage;

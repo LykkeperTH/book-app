@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import BookService from "../services/book-service";
 import CardBooks from "../views/home/card";
 
@@ -20,6 +21,19 @@ const Home = () => {
     await BookService.deleteBook(bookId);
     getBooks();
   };
+  const handleUpdateRating = async (bookId, rating) => {
+    try {
+      const book = await BookService.updateRating(bookId, rating);
+      const bookIndex = books.findIndex((book) => book.id === bookId);
+      if (bookIndex !== -1) {
+        const newBooks = [...books];
+        newBooks[bookIndex].rating = book.rating;
+        setBooks(newBooks);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   if (isLoading) {
     return <div>...Loading</div>;
   }
@@ -32,6 +46,7 @@ const Home = () => {
             book={book}
             key={book.id}
             hadleDeleteBook={handleDeleteBook}
+            handleUpdateRating={handleUpdateRating}
           />
         );
       })}

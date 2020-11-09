@@ -2,6 +2,7 @@ import { path } from "./constant";
 import Home from "../pages/home";
 import Book from "../pages/book/create";
 import { Switch, Route, Redirect } from "react-router-dom";
+import BookDetailPage from "../pages/book/detail";
 const Router = () => {
   return (
     <Switch>
@@ -10,7 +11,7 @@ const Router = () => {
         <Home />
       </Route>
       <Route path={`${path.detailBook}/:bookId`}>
-        <div>detail</div>
+        <BookDetailPage />
       </Route>
       <Route path={path.createBook}>
         <Book />

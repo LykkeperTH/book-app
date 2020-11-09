@@ -31,6 +31,26 @@ class Book {
       throw error;
     }
   }
+  async updateRating(bookId, rating) {
+    try {
+      const res = await axios.put(`${this.url}/rating/${bookId}`, {
+        rating: rating,
+      });
+      return res.data;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+  async getBooksById(bookId) {
+    try {
+      const res = await axios.get(`${this.url}/${bookId}`);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
 }
 const BookService = new Book();
 export default BookService;

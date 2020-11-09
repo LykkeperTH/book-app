@@ -269,3 +269,14 @@ input[type="number"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.action2{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.rating-star{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

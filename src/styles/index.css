@@ -248,6 +248,7 @@ input[type="number"] {
   font-size: 20px;
 }
 .action {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,14 +270,22 @@ input[type="number"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.action2{
+.action2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.rating-star{
+.rating-star {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.span-initial-right {
+  display: initial;
+  margin-right: 5px;
+}
+.span-initial-left {
+  display: initial;
+  margin-left: 5px;
 }

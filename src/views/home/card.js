@@ -35,8 +35,12 @@ const CardBooks = ({ book, hadleDeleteBook, handleUpdateRating }) => {
         />
       </div>
       <div className="action2">
-        <h4>฿{book.price}</h4>
-        <span>{book.stock}</span>
+        <span>฿{book.price}</span>
+        <span>
+          <div className="span-initial-right">จำนวน</div>
+          {book.stock}
+          <div className="span-initial-left">เล่ม</div>
+        </span>
       </div>
       <div className="action">
         <DeleteButton onClick={handleDelete}>ลบ</DeleteButton>

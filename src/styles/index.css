@@ -294,50 +294,51 @@ input[type="number"] {
   justify-content: center;
   width: 100%;
 }
-.img-detail{
+.img-detail {
   width: 350px;
   height: auto;
 }
-.img-cover{
+.img-cover {
   justify-content: flex-end;
   display: flex;
   width: 50%;
 }
-.detail-cover{
+.detail-cover {
   display: flex;
   width: 50%;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-.justify-space-between{
+.justify-space-between {
   justify-content: space-between;
 }
 
-
-.height-fit-content{
+.height-fit-content {
   height: fit-content;
 }
 
-.mt-0p{
+.mt-0p {
   margin-top: 0px;
 }
 
-.mb-0p{
+.mb-0p {
   margin-bottom: 0px;
 }
 
-.pd-10p{
+.pd-10p {
   padding: 10px;
 }
 
-.book-detail{
+.book-detail {
   max-width: 700px;
 }
 
-.mx-auto{
+.mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.book-content{
+.book-content {
   width: 100%;
   display: flex;
   height: fit-content;

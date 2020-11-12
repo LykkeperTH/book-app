@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+const { default: BackButton } = require("../../components/buttons/back");
+
 const DetailBookById = ({ book }) => {
   return (
     <div>
@@ -28,6 +32,11 @@ const DetailBookById = ({ book }) => {
           <div className="book-content">
             <h3 className="mt-0p mb-0p">ราคา</h3>
             <span>{book.price}</span>
+          </div>
+          <div className="d-flex width100 justify-center">
+            <Link to="/">
+              <BackButton>กลับหน้าหลัก</BackButton>
+            </Link>
           </div>
         </div>
       </div>

@@ -14,26 +14,26 @@ const DetailBookById = ({ book }) => {
         </div>
         <div className="detail-cover">
           <div className="book-content">
-            <h3 className="mt-0p mb-0p">รายละเอียดและประเภท</h3>
+            <h4 className="mt-0p mb-0p d-block">รายละเอียดและประเภท</h4>
             <span>{book.description}</span>
           </div>
           <div className="book-content">
-            <h3 className="mt-0p mb-0p">จำนวนหนังสือ</h3>
+            <h4 className="mt-0p mb-0p d-block">จำนวนหนังสือ</h4>
             <span>{book.stock}</span>
           </div>
           <div className="book-content">
-            <h3 className="mt-0p mb-0p">เข้าชม</h3>
+            <h4 className="mt-0p mb-0p d-block">เข้าชม</h4>
             <span>{book.totalRead}</span>
           </div>
           <div className="book-content">
-            <h3 className="mt-0p mb-0p">ความนิยม</h3>
+            <h4 className="mt-0p mb-0p d-block">ความนิยม</h4>
             <span>{book.totalPoint}</span>
           </div>
           <div className="book-content">
-            <h3 className="mt-0p mb-0p">ราคา</h3>
+            <h4 className="mt-0p mb-0p d-block">ราคา</h4>
             <span>{book.price}</span>
           </div>
-          <div className="d-flex width100 justify-center">
+          <div className="container width100 justify-center">
             <Link to="/">
               <BackButton>กลับหน้าหลัก</BackButton>
             </Link>

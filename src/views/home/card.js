@@ -4,7 +4,7 @@ import DeleteButton from "../../components/buttons/delete";
 import EditButton from "../../components/buttons/edit";
 import { path } from "../../route/constant";
 import Rating from "react-rating";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { BsStar, BsStarFill } from "react-icons/bs";
 
 const CardBooks = ({ book, hadleDeleteBook, handleUpdateRating }) => {
   const handleDelete = () => {
@@ -29,8 +29,8 @@ const CardBooks = ({ book, hadleDeleteBook, handleUpdateRating }) => {
       <div className="rating-star">
         <Rating
           onChange={handleRatingChange}
-          emptySymbol={<AiOutlineStar color="#FFD700" />}
-          fullSymbol={<AiFillStar color="#FFD700" />}
+          emptySymbol={<BsStar size={20} color="#FFD700" />}
+          fullSymbol={<BsStarFill size={20} color="#FFD700" />}
           initialRating={book.rating}
         />
       </div>

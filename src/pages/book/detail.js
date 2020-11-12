@@ -17,7 +17,11 @@ const BookDetailPage = () => {
     setLoading(false);
   };
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="d-flex width100 justify-ceneter">
+        {isLoading && <div className="loader-main "> </div>}
+      </div>
+    );
   }
   return <DetailBookById book={book} key={book.id} />;
 };

@@ -83,7 +83,7 @@ code {
   justify-content: center;
   margin-top: 20px;
 }
-.wit {
+.width500 {
   width: 500px;
 }
 .btn {
@@ -113,7 +113,7 @@ code {
   background-color: #ddd;
   outline: none;
 }
-hr {
+.hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
@@ -177,6 +177,19 @@ input[type="number"] {
   height: 10px;
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 1s linear infinite;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.loader-main {
+  border: 5px solid #5dade2;
+  border-radius: 50%;
+  border-top: 5px solid #aed6f1;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -316,6 +329,14 @@ input[type="number"] {
 .height-fit-content {
   height: fit-content;
 }
+.vertical-sub {
+  vertical-align: sub;
+  margin-right: 1px;
+}
+.vertical-top {
+  vertical-align: text-top;
+  margin-right: 1px;
+}
 
 .mt-0p {
   margin-top: 0px;
@@ -345,4 +366,8 @@ input[type="number"] {
   justify-content: space-between;
   padding: 10px;
   align-items: center;
+}
+.d-block {
+  display: block;
+  color: #808b96;
 }

@@ -35,11 +35,17 @@ const Home = () => {
     }
   };
   if (isLoading) {
-    return <div>...Loading</div>;
+    return (
+      <div className="justify-center d-flex width100">
+        {isLoading && <div className="loader-main "> </div>}
+      </div>
+    );
   }
-
   return (
     <div className="d-flex">
+      <div className="container width100 justify-center ">
+        <h1>หน้าหลัก</h1>
+      </div>
       {books.map((book) => {
         return (
           <CardBooks

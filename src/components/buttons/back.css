@@ -1,15 +1,16 @@
 .back-button {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-   
-  }
-  .back-button:hover {background-color: #F9E79F}
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #85c1e9;
+  border: none;
+  border-radius: 15px;
+}
+.back-button:hover {
+  background-color: #d7dbdd;
+}

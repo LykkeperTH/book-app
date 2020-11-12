@@ -44,10 +44,10 @@ const CreateBook = () => {
 
   return (
     <form className="form" onSubmit={formik.handleSubmit}>
-      <div className="wit">
+      <div className="width500">
         <h1>
           <FaAtlas />
-          &nbsp; สร้างหนังสือ
+          สร้างหนังสือ
         </h1>
         <hr></hr>
         <div className="pannal">

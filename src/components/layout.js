@@ -11,13 +11,13 @@ const Layout = ({ children }) => {
         <li>
           <NavLink to={path.home}>
             <ImHome className="vertical-top" size={20} />
-            Home
+            หน้าหลัก
           </NavLink>
         </li>
         <li>
           <NavLink to={path.createBook}>
             <FaPlusCircle className="vertical-sub" size={20} />
-            Book
+            หนังสือ
           </NavLink>
         </li>
       </ul>

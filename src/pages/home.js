@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import BookService from "../services/book-service";
 import CardBooks from "../views/home/card";
 
@@ -36,8 +35,8 @@ const Home = () => {
   };
   if (isLoading) {
     return (
-      <div className="justify-center d-flex width100">
-        {isLoading && <div className="loader-main "> </div>}
+      <div className="justify-center container ">
+        {isLoading && <div className="loader-main"> </div>}
       </div>
     );
   }

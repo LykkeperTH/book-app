@@ -8,9 +8,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .container {
-  /* flex-wrap: wrap; */
   display: flex;
 }
 .d-flex {
@@ -86,16 +84,7 @@ code {
 .width500 {
   width: 500px;
 }
-.btn {
-  background-color: dodgerblue;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-  font-family: Mitr;
-}
+
 .form-add {
   width: 100%;
   padding: 15px;
@@ -113,25 +102,9 @@ code {
   background-color: #ddd;
   outline: none;
 }
-.hr {
+hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-}
-.btn-c {
-  background-color: #ffc300; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 1;
 }
 
 .pannal {
@@ -181,11 +154,11 @@ input[type="number"] {
   margin-right: 10px;
 }
 .loader-main {
-  border: 5px solid #5dade2;
+  border: 10px solid #5dade2;
   border-radius: 50%;
-  border-top: 5px solid #aed6f1;
-  width: 35px;
-  height: 35px;
+  border-top: 10px solid #aed6f1;
+  width: 100px;
+  height: 100px;
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 1s linear infinite;
   margin-top: 10px;
@@ -193,7 +166,6 @@ input[type="number"] {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 /* Safari */
 @-webkit-keyframes spin {
   0% {
@@ -336,6 +308,14 @@ input[type="number"] {
 .vertical-top {
   vertical-align: text-top;
   margin-right: 1px;
+}
+.readeye {
+  position: absolute;
+  right: 0;
+  background-color: black;
+  color: #fff;
+  opacity: .5;
+  padding: 10px;
 }
 
 .mt-0p {

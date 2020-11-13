@@ -21,6 +21,9 @@ const CardBooks = ({ book, hadleDeleteBook, handleUpdateRating }) => {
     <div className="book read">
       <div className="cover">
         <img className="width100 img" src={book.imageUrl} alt="Avatar" />
+        {/* <span className="readeye">
+          <BsFillEyeFill />
+        </span> */}
       </div>
       <div className="width100">
         <h3 className="line-clamp-1">{book.title}</h3>

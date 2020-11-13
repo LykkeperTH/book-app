@@ -18,7 +18,7 @@ const BookDetailPage = () => {
   };
   if (isLoading) {
     return (
-      <div className="d-flex width100 justify-ceneter">
+      <div className="justify-center container">
         {isLoading && <div className="loader-main "> </div>}
       </div>
     );

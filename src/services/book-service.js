@@ -51,6 +51,15 @@ class Book {
       throw error;
     }
   }
+  async updateBookDetail(bookId, data) {
+    try {
+      const res = await axios.put(`${this.url}/detail/${bookId}`, data);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
 }
 const BookService = new Book();
 export default BookService;

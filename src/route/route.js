@@ -3,6 +3,7 @@ import Home from "../pages/home";
 import Book from "../pages/book/create";
 import { Switch, Route, Redirect } from "react-router-dom";
 import BookDetailPage from "../pages/book/detail";
+import UpdateBookPage from "../pages/book/update";
 const Router = () => {
   return (
     <Switch>
@@ -17,7 +18,7 @@ const Router = () => {
         <Book />
       </Route>
       <Route path={`${path.updateBook}/:bookId`}>
-        <div>updatebook</div>
+        <UpdateBookPage />
       </Route>
       <Route path="*">
         <div>404</div>

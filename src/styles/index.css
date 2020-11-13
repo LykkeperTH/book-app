@@ -84,6 +84,21 @@ code {
 .width500 {
   width: 500px;
 }
+.btn {
+  background-color: #52bddd;
+  color: white;
+  padding: 16px ;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: mitr;
+}
+
+.btn:hover {
+  opacity:1;
+}
 
 .form-add {
   width: 100%;

@@ -1,0 +1,30 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import BookService from "../../services/book-service";
+
+import UpdateBook from "../../views/book/update";
+
+const UpdateBookPage = () => {
+  const param = useParams();
+  const [book, setBook] = useState();
+  const [isLoading, setLoading] = useState(true);
+  useEffect(() => {
+    getBookById();
+  }, []);
+  const getBookById = async () => {
+    const book = await BookService.getBooksById(param.bookId);
+    setBook(book);
+    setLoading(false);
+  };
+  if (isLoading) {
+    return (
+      <div className="justify-center container">
+        {isLoading && <div className="loader-main "> </div>}
+      </div>
+    );
+  }
+  console.log(book);
+  return <UpdateBook book={book} />;
+};
+export default UpdateBookPage;

@@ -50,7 +50,9 @@ const CardBooks = ({ book, hadleDeleteBook, handleUpdateRating }) => {
         <Link className="color-main" to={`${path.detailBook}/${book.id}`}>
           รายละเอียด
         </Link>
-        <EditButton>แก้ไข</EditButton>
+        <Link to={`${path.updateBook}/${book.id}`}>
+          <EditButton>แก้ไข</EditButton>
+        </Link>
       </div>
     </div>
   );
